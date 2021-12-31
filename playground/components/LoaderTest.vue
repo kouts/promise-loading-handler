@@ -1,9 +1,3 @@
-<script lang="ts">
-export default {
-  name: 'LoaderTest',
-};
-</script>
-
 <script setup lang="ts">
 import { load } from '@playground/loader';
 import axios from 'axios';
@@ -81,7 +75,6 @@ const fireMultiple = (withLoader) => {
   </div>
 </template>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;
@@ -96,5 +89,10 @@ li {
 }
 a {
   color: #42b983;
+}
+hr {
+  border-bottom: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0px 30px 0px;
 }
 </style>
