@@ -9,22 +9,15 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     'standard',
     'plugin:import/typescript',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier-vue/recommended',
+    'prettier'
   ],
   parserOptions: {
     ecmaVersion: 2021
   },
-  plugins: [
-    'html'
-  ],
-  ignorePatterns: [
-    '**/node_modules/**',
-    '{tmp,temp}/**',
-    '**/*.min.js',
-    'vendor/**',
-    'dist/**',
-    'public/**'
-  ],
+  plugins: ['html'],
+  ignorePatterns: ['**/node_modules/**', '{tmp,temp}/**', '**/*.min.js', 'vendor/**', 'dist/**', 'public/**'],
   overrides: [
     {
       files: ['*.json'],
@@ -50,7 +43,6 @@ module.exports = {
         jest: true
       }
     }
-
   ],
   rules: {
     // Console and debugger settings depending whether we're on production or not

@@ -5,10 +5,7 @@ import LoaderTest from '@playground/components/LoaderTest.vue'
 </script>
 
 <template>
-  <img
-    alt="Vue logo"
-    src="./assets/logo.png"
-  >
+  <img alt="Vue logo" src="./assets/logo.png" />
   <LoaderTest />
 </template>
 

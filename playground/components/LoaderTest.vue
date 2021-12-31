@@ -42,17 +42,11 @@ const fireMultiple = (withLoader) => {
       Without using the loader you will notice that the loading indicator resets its progress causing a flicker.
     </p>
     <p>
-      <a
-        href="javascript:;"
-        @click="fireRequestWithoutLoader"
-      >Click me quickly multiple times</a>
+      <a href="javascript:;" @click="fireRequestWithoutLoader">Click me quickly multiple times</a>
       or
-      <a
-        href="javascript:;"
-        @click="fireMultiple(false)"
-      >Simulate multiple clicks</a>
+      <a href="javascript:;" @click="fireMultiple(false)">Simulate multiple clicks</a>
     </p>
-    <hr>
+    <hr />
     <p>
       <strong>With loader:</strong>
     </p>
@@ -61,15 +55,9 @@ const fireMultiple = (withLoader) => {
       progress.
     </p>
     <p>
-      <a
-        href="javascript:;"
-        @click="fireRequest"
-      >Click me quickly multiple times</a>
+      <a href="javascript:;" @click="fireRequest">Click me quickly multiple times</a>
       or
-      <a
-        href="javascript:;"
-        @click="fireMultiple(true)"
-      >Simulate multiple clicks</a>
+      <a href="javascript:;" @click="fireMultiple(true)">Simulate multiple clicks</a>
     </p>
   </div>
 </template>
