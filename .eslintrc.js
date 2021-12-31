@@ -1,16 +1,19 @@
 module.exports = {
   root: true,
   env: {
-    es6: true,
+    es2021: true,
     browser: true,
     node: true
   },
   extends: [
     'plugin:vue/vue3-recommended',
     'standard',
-    'plugin:import/recommended',
+    'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended'
   ],
+  parserOptions: {
+    ecmaVersion: 2021
+  },
   plugins: [
     'html'
   ],

@@ -9,7 +9,7 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, './src'),
       '@playground': resolve(__dirname, './playground'),
-      '@root': resolve(__dirname, './'),
-    },
-  },  
+      '@root': resolve(__dirname, './')
+    }
+  }
 })

@@ -1,40 +1,36 @@
 <script setup lang="ts">
-import { load } from '@playground/loader';
-import axios from 'axios';
-import NProgress from 'nprogress';
+import { load } from '@playground/loader'
+import axios from 'axios'
+import NProgress from 'nprogress'
 
-const createRandomNumber = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
+const createRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
 
-const request = () =>
-  axios.get(
-    `https://jsonplaceholder.typicode.com/todos/${createRandomNumber(1, 10)}`
-  );
+const request = () => axios.get(`https://jsonplaceholder.typicode.com/todos/${createRandomNumber(1, 10)}`)
 
 const fireRequest = () => {
   load(request).then((res) => {
-    console.log(res.data);
-  });
-};
+    console.log(res.data)
+  })
+}
 
 const fireRequestWithoutLoader = () => {
-  NProgress.start();
+  NProgress.start()
   request().then((res) => {
-    console.log(res.data);
-    NProgress.done();
-  });
-};
+    console.log(res.data)
+    NProgress.done()
+  })
+}
 
 const fireMultiple = (withLoader) => {
-  let timesRun = 0;
-  let intervalID = setInterval(() => {
-    timesRun += 1;
-    withLoader ? fireRequest() : fireRequestWithoutLoader();
+  let timesRun = 0
+  const intervalID = setInterval(() => {
+    timesRun += 1
+    withLoader ? fireRequest() : fireRequestWithoutLoader()
     if (timesRun === 24) {
-      clearInterval(intervalID);
+      clearInterval(intervalID)
     }
-  }, 250);
-};
+  }, 250)
+}
 </script>
 
 <template>
@@ -43,34 +39,37 @@ const fireMultiple = (withLoader) => {
       <strong>Without loader:</strong>
     </p>
     <p style="margin-top: 10px">
-      Without using the loader you will notice that the loading indicator resets
-      its progress causing a flicker.
+      Without using the loader you will notice that the loading indicator resets its progress causing a flicker.
     </p>
     <p>
-      <a href="javascript:;" @click="fireRequestWithoutLoader"
-        >Click me quickly multiple times</a
-      >
+      <a
+        href="javascript:;"
+        @click="fireRequestWithoutLoader"
+      >Click me quickly multiple times</a>
       or
-      <a href="javascript:;" @click="fireMultiple(false)"
-        >Simulate multiple clicks</a
-      >
+      <a
+        href="javascript:;"
+        @click="fireMultiple(false)"
+      >Simulate multiple clicks</a>
     </p>
-    <hr />
+    <hr>
     <p>
       <strong>With loader:</strong>
     </p>
     <p>
-      Click on the link below multiple times <strong>fast</strong> and you'll
-      notice that the loading bar does not reset its progress.
+      Click on the link below multiple times <strong>fast</strong> and you'll notice that the loading bar does not reset its
+      progress.
     </p>
     <p>
-      <a href="javascript:;" @click="fireRequest"
-        >Click me quickly multiple times</a
-      >
+      <a
+        href="javascript:;"
+        @click="fireRequest"
+      >Click me quickly multiple times</a>
       or
-      <a href="javascript:;" @click="fireMultiple(true)"
-        >Simulate multiple clicks</a
-      >
+      <a
+        href="javascript:;"
+        @click="fireMultiple(true)"
+      >Simulate multiple clicks</a>
     </p>
   </div>
 </template>
