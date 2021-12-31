@@ -1,3 +1,48 @@
+<script lang="ts">
+export default {
+  name: 'LoaderTest',
+};
+</script>
+
+<script setup lang="ts">
+import { load } from '@playground/loader';
+import axios from 'axios';
+import NProgress from 'nprogress';
+
+const createRandomNumber = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
+const request = () =>
+  axios.get(
+    `https://jsonplaceholder.typicode.com/todos/${createRandomNumber(1, 10)}`
+  );
+
+const fireRequest = () => {
+  load(request).then((res) => {
+    console.log(res.data);
+  });
+};
+
+const fireRequestWithoutLoader = () => {
+  NProgress.start();
+  request().then((res) => {
+    console.log(res.data);
+    NProgress.done();
+  });
+};
+
+const fireMultiple = (withLoader) => {
+  let timesRun = 0;
+  let intervalID = setInterval(() => {
+    timesRun += 1;
+    withLoader ? fireRequest() : fireRequestWithoutLoader();
+    if (timesRun === 24) {
+      clearInterval(intervalID);
+    }
+  }, 250);
+};
+</script>
+
 <template>
   <div>
     <p>
@@ -35,59 +80,6 @@
     </p>
   </div>
 </template>
-
-<script>
-import { load } from '../loader';
-import axios from 'axios';
-import NProgress from 'nprogress';
-
-const createRandomNumber = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
-
-export default {
-  name: 'LoaderTest',
-  setup() {
-    const request = () =>
-      axios.get(
-        `https://jsonplaceholder.typicode.com/todos/${createRandomNumber(
-          1,
-          10
-        )}`
-      );
-
-    const fireRequest = () => {
-      load(request).then((res) => {
-        console.log(res.data);
-      });
-    };
-
-    const fireRequestWithoutLoader = () => {
-      NProgress.start();
-      request().then((res) => {
-        console.log(res.data);
-        NProgress.done();
-      });
-    };
-
-    const fireMultiple = (withLoader) => {
-      let timesRun = 0;
-      let intervalID = setInterval(() => {
-        timesRun += 1;
-        withLoader ? fireRequest() : fireRequestWithoutLoader();
-        if (timesRun === 24) {
-          clearInterval(intervalID);
-        }
-      }, 250);
-    };
-
-    return {
-      fireRequest,
-      fireRequestWithoutLoader,
-      fireMultiple,
-    };
-  },
-};
-</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

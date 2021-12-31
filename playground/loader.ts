@@ -1,5 +1,5 @@
 import NProgress from 'nprogress';
-import { createLoader } from '../src/createLoader';
+import { createLoader } from '@/createLoader';
 
 NProgress.configure({
   minimum: 0.35,
