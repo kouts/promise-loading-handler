@@ -6,7 +6,8 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint \"**/*.{vue,ts,js}\"",
-    "lint-fix": "eslint --fix \"**/*.{vue,ts,js}\""
+    "lint-fix": "eslint --fix \"**/*.{vue,ts,js}\"",
+    "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
