@@ -11,5 +11,20 @@ export default defineConfig({
       '@playground': resolve(__dirname, './playground'),
       '@root': resolve(__dirname, './')
     }
+  },
+  build: {
+    lib: {
+      entry: resolve(__dirname, 'src/createLoader.ts'),
+      name: 'PromiseLoadingHandler',
+      fileName: (format) => `promise-loading-handler.${format}.js`
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        globals: {
+          vue: 'Vue'
+        }
+      }
+    }
   }
 })

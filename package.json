@@ -1,6 +1,14 @@
 {
-  "name": "my-vue-app",
+  "name": "promise-loading-handler",
   "version": "0.0.0",
+  "main": "./dist/promise-loading-handler.umd.js",
+  "module": "./dist/promise-loading-handler.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/promise-loading-handler.es.js",
+      "require": "./dist/promise-loading-handler.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
