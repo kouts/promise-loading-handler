@@ -28,6 +28,7 @@
     "lint": "eslint \"**/*.{vue,ts,js}\"",
     "lint-fix": "eslint --fix \"**/*.{vue,ts,js}\"",
     "test:unit": "jest",
+    "test:unit-coverage": "jest --coverage",
     "typecheck": "vue-tsc --noEmit",
     "prepare": "husky install"
   },
