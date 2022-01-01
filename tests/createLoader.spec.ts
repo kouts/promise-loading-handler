@@ -80,4 +80,18 @@ describe('createLoader', () => {
       expect(end).toHaveBeenCalledTimes(1)
     })
   })
+
+  it('works with a method that returns a promise', async () => {
+    jest.useFakeTimers()
+    const { load } = createLoader({ start, end })
+
+    load(() => sleep(100))
+
+    jest.advanceTimersByTime(200)
+    await Promise.resolve()
+    jest.advanceTimersByTime(200)
+
+    expect(start).toHaveBeenCalledTimes(1)
+    expect(end).toHaveBeenCalledTimes(1)
+  })
 })
