@@ -63,10 +63,10 @@ describe('createLoader', () => {
     load(sleep(5))
     await sleep(10)
     load(sleep(5))
-    await sleep(20)
-
-    expect(start).toHaveBeenCalledTimes(2)
-    expect(end).toHaveBeenCalledTimes(2)
+    sleep(20).then(() => {
+      expect(start).toHaveBeenCalledTimes(2)
+      expect(end).toHaveBeenCalledTimes(2)
+    })
   })
 
   it('should fire once when slacktime duration is long enough', async () => {
@@ -75,9 +75,9 @@ describe('createLoader', () => {
     load(sleep(5))
     await sleep(10)
     load(sleep(5))
-    await sleep(20)
-
-    expect(start).toHaveBeenCalledTimes(1)
-    expect(end).toHaveBeenCalledTimes(1)
+    sleep(50).then(() => {
+      expect(start).toHaveBeenCalledTimes(1)
+      expect(end).toHaveBeenCalledTimes(1)
+    })
   })
 })
