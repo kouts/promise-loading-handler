@@ -3,7 +3,7 @@ import { load } from '@playground/loader'
 import axios from 'axios'
 import NProgress from 'nprogress'
 
-const createRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
+const createRandomNumber = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min
 
 const request = () => axios.get(`https://jsonplaceholder.typicode.com/todos/${createRandomNumber(1, 10)}`)
 
@@ -21,7 +21,7 @@ const fireRequestWithoutLoader = () => {
   })
 }
 
-const fireMultiple = (withLoader) => {
+const fireMultiple = (withLoader: boolean) => {
   let timesRun = 0
   const intervalID = setInterval(() => {
     timesRun += 1
