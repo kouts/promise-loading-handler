@@ -1,6 +1,16 @@
 {
   "name": "promise-loading-handler",
-  "version": "0.0.0",
+  "version": "0.0.0-semantic-release",
+  "license": "MIT",
+  "repository": "https://github.com/kouts/promise-loading-handler",
+  "keywords": [
+    "loader",
+    "loading",
+    "progress",
+    "spinner",
+    "promise",
+    "handler"
+  ],  
   "main": "./dist/promise-loading-handler.umd.js",
   "module": "./dist/promise-loading-handler.es.js",
   "exports": {
@@ -9,6 +19,8 @@
       "require": "./dist/promise-loading-handler.umd.js"
     }
   },
+  "unpkg": "dist/promise-loading-handler.umd.js",
+  "sideEffects": false,  
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
