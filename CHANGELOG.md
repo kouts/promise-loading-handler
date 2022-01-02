@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/kouts/promise-loading-handler/compare/v1.0.4...v1.0.5) (2022-01-02)
+
+
+### Bug Fixes
+
+* removed dist from .gitignore ([4fdc49d](https://github.com/kouts/promise-loading-handler/commit/4fdc49db67ec27914fcbbe7018b3cb5d9ef24346))
+
 ## [1.0.4](https://github.com/kouts/promise-loading-handler/compare/v1.0.3...v1.0.4) (2022-01-02)
 
 
