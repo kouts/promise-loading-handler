@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/kouts/promise-loading-handler/compare/v1.0.5...v1.0.6) (2022-01-02)
+
+
+### Bug Fixes
+
+* fixed size badges, added demo pics ([2c0354b](https://github.com/kouts/promise-loading-handler/commit/2c0354b689806aa1c4a0304fe60d9ec3d16677fe))
+
 ## [1.0.5](https://github.com/kouts/promise-loading-handler/compare/v1.0.4...v1.0.5) (2022-01-02)
 
 
