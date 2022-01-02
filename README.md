@@ -1,9 +1,13 @@
-# promise-loading-handler <a href="https://npm.im/promise-loading-handler"><img src="https://badgen.net/npm/v/promise-loading-handler"></a> ![](https://img.badgesize.io/promise-loading-handler/dist/promise-loading-handler.umd.js.svg) ![](https://img.badgesize.io/promise-loading-handler/dist/promise-loading-handler.umd.js.svg?compression=gzip)
+# promise-loading-handler <a href="https://npm.im/promise-loading-handler"><img src="https://badgen.net/npm/v/promise-loading-handler"></a> ![](https://img.badgesize.io/kouts/promise-loading-handler/main/dist/promise-loading-handler.umd.js.svg) ![](https://img.badgesize.io/kouts/promise-loading-handler/main/dist/promise-loading-handler.umd.js.svg?compression=gzip)
 
 A simple, reusable loading handler function for `Promises` that will make sure the loading indicator in JS apps will disappear only when the last unresolved `Promise` gets resolved.  
 Created to solve the "flickering" issue that occurs when multiple requests are triggering the start of the loading progress.
 
-<img src="/.github/loading-indicator-flicker.gif" width="100%">
+**With** `promise-loading-handler`  
+<img src=".github/with-promise-loading-handler.gif" width="100%">
+
+**Without** `promise-loading-handler`  
+<img src=".github/without-promise-loading-handler.gif" width="100%">
 
 ## Setup
 
