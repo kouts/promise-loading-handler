@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "esnext",
+    "target": "es5",
     "useDefineForClassFields": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -20,8 +20,7 @@
   },
   "include": [
     "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", 
-    "playground/**/*.ts", "playground/**/*.d.ts", "playground/**/*.tsx", "playground/**/*.vue",
-    "tests/**/*.ts", "tests/**/*.d.ts", "tests/**/*.tsx", "tests/**/*.vue",
+    "playground/**/*.ts", "playground/**/*.d.ts", "playground/**/*.tsx", "playground/**/*.vue"
   ],
   "exclude": ["node_modules"]
 }
