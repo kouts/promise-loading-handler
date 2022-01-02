@@ -1,5 +1,6 @@
 {
   "name": "promise-loading-handler",
+  "description": "A simple, reusable loading handler function for Promises",
   "version": "0.0.0-semantic-release",
   "license": "MIT",
   "repository": "https://github.com/kouts/promise-loading-handler",
