@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/kouts/promise-loading-handler/compare/v1.0.2...v1.0.3) (2022-01-02)
+
+
+### Bug Fixes
+
+* updated release assets ([1eadc8b](https://github.com/kouts/promise-loading-handler/commit/1eadc8b2a5ea41b970c3f9eea71e182df8db4f78))
+
 ## [1.0.2](https://github.com/kouts/promise-loading-handler/compare/v1.0.1...v1.0.2) (2022-01-02)
 
 
