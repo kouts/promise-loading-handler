@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/kouts/promise-loading-handler/compare/v1.0.6...v1.0.7) (2022-01-08)
+
+
+### Bug Fixes
+
+* added coverage badge ([cf4c368](https://github.com/kouts/promise-loading-handler/commit/cf4c368038cdff928f402b5c3168bd5e8ff37223))
+
 ## [1.0.6](https://github.com/kouts/promise-loading-handler/compare/v1.0.5...v1.0.6) (2022-01-02)
 
 
