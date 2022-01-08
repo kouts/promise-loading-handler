@@ -14,5 +14,5 @@ module.exports = {
     '^@root/(.*)$': '<rootDir>/$1'
   },
   coveragePathIgnorePatterns: ['/node_modules/', '/playground/', '/tests/'],
-  coverageReporters: ['text']
+  coverageReporters: ['text', 'json-summary']
 }

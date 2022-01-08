@@ -29,7 +29,7 @@
     "lint": "eslint \"**/*.{vue,ts,js}\"",
     "lint-fix": "eslint --fix \"**/*.{vue,ts,js}\"",
     "test:unit": "jest",
-    "test:unit-coverage": "jest --coverage",
+    "test:unit-coverage": "jest --coverage && make-coverage-badge",
     "typecheck": "vue-tsc --noEmit",
     "prepare": "husky install"
   },
@@ -62,6 +62,7 @@
     "husky": "^7.0.0",
     "jest": "^27.4.5",
     "lint-staged": "^12.1.4",
+    "make-coverage-badge": "^1.2.0",
     "nprogress": "^0.2.0",
     "prettier": "^2.5.1",
     "rollup-plugin-delete": "^2.0.0",
