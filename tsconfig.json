@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
     "baseUrl": ".",
     "target": "es5",
     "useDefineForClassFields": true,
@@ -20,7 +21,8 @@
   },
   "include": [
     "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", 
-    "playground/**/*.ts", "playground/**/*.d.ts", "playground/**/*.tsx", "playground/**/*.vue"
+    "playground/**/*.ts", "playground/**/*.d.ts", "playground/**/*.tsx", "playground/**/*.vue",
+    "tests/**/*.ts", "tests/**/*.d.ts", "tests/**/*.tsx", "tests/**/*.vue"
   ],
   "exclude": ["node_modules"]
 }
