@@ -22,6 +22,8 @@ jobs:
       run: npm install --save-dev @semantic-release/changelog @semantic-release/git      
     - name: Lint
       run: npm run lint-fix
+    - name: Typecheck
+      run: npm run typecheck      
     - name: Test
       run: npm run test:unit-coverage --if-present
     - name: Build
