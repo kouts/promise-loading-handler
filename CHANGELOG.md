@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/kouts/promise-loading-handler/compare/v1.0.7...v1.0.8) (2022-01-16)
+
+
+### Bug Fixes
+
+* fixed typechecking in jest ([2d64d5b](https://github.com/kouts/promise-loading-handler/commit/2d64d5bcf028abd7c1c91e7ce20a68befceeac30))
+
 ## [1.0.7](https://github.com/kouts/promise-loading-handler/compare/v1.0.6...v1.0.7) (2022-01-08)
 
 
