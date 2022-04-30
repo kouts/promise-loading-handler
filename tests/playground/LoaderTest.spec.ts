@@ -1,5 +1,5 @@
-import { mount } from '@vue/test-utils'
 import LoaderTest from '@playground/components/LoaderTest.vue'
+import { mount } from '@vue/test-utils'
 
 const createWrapper = (opts?: Record<string, unknown>) => {
   return mount(LoaderTest, opts)

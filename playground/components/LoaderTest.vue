@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { load } from '@playground/loader'
-import axios from 'axios'
 import NProgress from 'nprogress'
+import axios from 'axios'
+import { load } from '@playground/loader'
 
 const createRandomNumber = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min
 
