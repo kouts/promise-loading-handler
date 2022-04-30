@@ -1,3 +1,11 @@
+## [1.0.10](https://github.com/kouts/promise-loading-handler/compare/v1.0.9...v1.0.10) (2022-04-30)
+
+
+### Bug Fixes
+
+* updated eslint config ([380e602](https://github.com/kouts/promise-loading-handler/commit/380e6023d0497d482afbd6b207983025d7485b77))
+* updated npm packages ([125fd04](https://github.com/kouts/promise-loading-handler/commit/125fd040cf79d106276082579ccd2b9a085beda5))
+
 ## [1.0.9](https://github.com/kouts/promise-loading-handler/compare/v1.0.8...v1.0.9) (2022-01-18)
 
 
