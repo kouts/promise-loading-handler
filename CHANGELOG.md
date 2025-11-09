@@ -1,3 +1,11 @@
+## [1.0.12](https://github.com/kouts/promise-loading-handler/compare/v1.0.11...v1.0.12) (2025-11-09)
+
+
+### Bug Fixes
+
+* fixed release workflow ([d68bbd0](https://github.com/kouts/promise-loading-handler/commit/d68bbd062242ce12515373dee6b34a5a7e071466))
+* updated node and npm packages ([beadac3](https://github.com/kouts/promise-loading-handler/commit/beadac36207dff19181406b370477acc220209fc))
+
 ## [1.0.11](https://github.com/kouts/promise-loading-handler/compare/v1.0.10...v1.0.11) (2022-07-23)
 
 
