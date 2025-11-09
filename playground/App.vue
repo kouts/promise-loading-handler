@@ -2,6 +2,8 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import LoaderTest from '@playground/components/LoaderTest.vue'
+
+defineOptions({ name: 'App' })
 </script>
 
 <template>
@@ -41,7 +43,9 @@ import LoaderTest from '@playground/components/LoaderTest.vue'
 }
 
 #nprogress .peg {
-  box-shadow: 0 0 10px #41b883, 0 0 5px #41b883;
+  box-shadow:
+    0 0 10px #41b883,
+    0 0 5px #41b883;
 }
 
 #nprogress .spinner-icon {
