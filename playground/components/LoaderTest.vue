@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import NProgress from 'nprogress'
-import axios from 'axios'
 import { load } from '@playground/loader'
+import axios from 'axios'
+import NProgress from 'nprogress'
+
+defineOptions({ name: 'LoaderTest' })
 
 const createRandomNumber = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min
 
@@ -25,7 +27,11 @@ const fireMultiple = (withLoader: boolean) => {
   let timesRun = 0
   const intervalID = setInterval(() => {
     timesRun += 1
-    withLoader ? fireRequest() : fireRequestWithoutLoader()
+    if (withLoader) {
+      fireRequest()
+    } else {
+      fireRequestWithoutLoader()
+    }
     if (timesRun === 24) {
       clearInterval(intervalID)
     }
@@ -38,7 +44,7 @@ const fireMultiple = (withLoader: boolean) => {
     <p>
       <strong>Without loader:</strong>
     </p>
-    <p style="margin-top: 10px">
+    <p class="mt-10px">
       Without using the loader you will notice that the loading indicator resets its progress causing a flicker.
     </p>
     <p>
@@ -81,5 +87,8 @@ hr {
   border-bottom: none;
   border-top: 1px solid #ccc;
   margin: 30px 0px 30px 0px;
+}
+.mt-10px {
+  margin-top: 10px;
 }
 </style>

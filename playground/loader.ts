@@ -3,7 +3,7 @@ import { createLoader } from '@/createLoader'
 
 NProgress.configure({
   minimum: 0.35,
-  speed: 300
+  speed: 300,
 })
 
 const disableArrowKeys = (e: KeyboardEvent) => {

@@ -6,9 +6,9 @@ export const createLoader = (options: { start: () => void; end: () => void; inc?
       inc: () => {
         // void
       },
-      slackTime: 0
+      slackTime: 0,
     },
-    ...options
+    ...options,
   }
 
   const load = <T>(promise: Promise<T> | (() => Promise<T>)) => {
