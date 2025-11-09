@@ -8,7 +8,8 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   plugins: [
     del({ targets: 'dist/favicon.ico', hook: 'writeBundle' }),
-    vue(), // https://github.com/qmhc/vite-plugin-dts#options
+    vue(),
+    // https://github.com/qmhc/vite-plugin-dts#options
     dts({
       exclude: ['playground/**', 'tests/**'],
       outDir: 'dist/types',
